@@ -1,0 +1,81 @@
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+xcshareddata/
+DerivedData/
+*.xccheckout
+*.moved-aside
+*.xcscmblueprint
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+
+# Swift Package Manager
+.build/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+fastlane/.env
+
+# App specific
+*.swp
+*~.nib
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# JetBrains IDEs
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Node modules (if you're using React Native or other Node.js frameworks)
+node_modules/
+
+# Environment variables and credentials
+.env*
+*.p12
+
+# Archive files that may contain sensitive data or large binaries
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Keystore files for signing apps
+*.keystore
+
+# Playgrounds (if used for experimenting with code)
+*.playground/
