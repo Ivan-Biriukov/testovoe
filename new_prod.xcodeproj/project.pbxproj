@@ -6,8 +6,43 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		ECBB4CEB2ED60F9A008E7F57 /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBB4CE32ED60F9A008E7F57 /* BusinessLogic.framework */; };
+		ECBB4CEC2ED60F9A008E7F57 /* BusinessLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECBB4CE32ED60F9A008E7F57 /* BusinessLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ECBB4D072ED6110A008E7F57 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = ECBB4D062ED6110A008E7F57 /* RxCocoa */; };
+		ECBB4D092ED6110A008E7F57 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECBB4D082ED6110A008E7F57 /* RxSwift */; };
+		ECBB4D0C2ED6113C008E7F57 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECBB4D0B2ED6113C008E7F57 /* RealmSwift */; };
+		ECBB4D222ED61390008E7F57 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = ECBB4D212ED61390008E7F57 /* RxCocoa */; };
+		ECBB4D242ED61395008E7F57 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECBB4D232ED61395008E7F57 /* RxSwift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECBB4CE92ED60F9A008E7F57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECBB4CBE2ED60E2A008E7F57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECBB4CE22ED60F9A008E7F57;
+			remoteInfo = BusinessLogic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ECBB4CF02ED60F9A008E7F57 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ECBB4CEC2ED60F9A008E7F57 /* BusinessLogic.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		ECBB4CC62ED60E2A008E7F57 /* new_prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = new_prod.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECBB4CE32ED60F9A008E7F57 /* BusinessLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BusinessLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -29,6 +64,11 @@
 			path = new_prod;
 			sourceTree = "<group>";
 		};
+		ECBB4CE42ED60F9A008E7F57 /* BusinessLogic */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +76,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECBB4D092ED6110A008E7F57 /* RxSwift in Frameworks */,
+				ECBB4D072ED6110A008E7F57 /* RxCocoa in Frameworks */,
+				ECBB4CEB2ED60F9A008E7F57 /* BusinessLogic.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECBB4CE02ED60F9A008E7F57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECBB4D242ED61395008E7F57 /* RxSwift in Frameworks */,
+				ECBB4D222ED61390008E7F57 /* RxCocoa in Frameworks */,
+				ECBB4D0C2ED6113C008E7F57 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				ECBB4CC82ED60E2A008E7F57 /* new_prod */,
+				ECBB4CE42ED60F9A008E7F57 /* BusinessLogic */,
+				ECBB4D202ED61390008E7F57 /* Frameworks */,
 				ECBB4CC72ED60E2A008E7F57 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,11 +109,29 @@
 			isa = PBXGroup;
 			children = (
 				ECBB4CC62ED60E2A008E7F57 /* new_prod.app */,
+				ECBB4CE32ED60F9A008E7F57 /* BusinessLogic.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		ECBB4D202ED61390008E7F57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		ECBB4CDE2ED60F9A008E7F57 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		ECBB4CC52ED60E2A008E7F57 /* new_prod */ = {
@@ -68,20 +141,50 @@
 				ECBB4CC22ED60E2A008E7F57 /* Sources */,
 				ECBB4CC32ED60E2A008E7F57 /* Frameworks */,
 				ECBB4CC42ED60E2A008E7F57 /* Resources */,
+				ECBB4CF02ED60F9A008E7F57 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				ECBB4CEA2ED60F9A008E7F57 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				ECBB4CC82ED60E2A008E7F57 /* new_prod */,
 			);
 			name = new_prod;
 			packageProductDependencies = (
+				ECBB4D062ED6110A008E7F57 /* RxCocoa */,
+				ECBB4D082ED6110A008E7F57 /* RxSwift */,
 			);
 			productName = new_prod;
 			productReference = ECBB4CC62ED60E2A008E7F57 /* new_prod.app */;
 			productType = "com.apple.product-type.application";
+		};
+		ECBB4CE22ED60F9A008E7F57 /* BusinessLogic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECBB4CED2ED60F9A008E7F57 /* Build configuration list for PBXNativeTarget "BusinessLogic" */;
+			buildPhases = (
+				ECBB4CDE2ED60F9A008E7F57 /* Headers */,
+				ECBB4CDF2ED60F9A008E7F57 /* Sources */,
+				ECBB4CE02ED60F9A008E7F57 /* Frameworks */,
+				ECBB4CE12ED60F9A008E7F57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				ECBB4CE42ED60F9A008E7F57 /* BusinessLogic */,
+			);
+			name = BusinessLogic;
+			packageProductDependencies = (
+				ECBB4D0B2ED6113C008E7F57 /* RealmSwift */,
+				ECBB4D212ED61390008E7F57 /* RxCocoa */,
+				ECBB4D232ED61395008E7F57 /* RxSwift */,
+			);
+			productName = BusinessLogic;
+			productReference = ECBB4CE32ED60F9A008E7F57 /* BusinessLogic.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,6 +199,9 @@
 					ECBB4CC52ED60E2A008E7F57 = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
+					ECBB4CE22ED60F9A008E7F57 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
 				};
 			};
 			buildConfigurationList = ECBB4CC12ED60E2A008E7F57 /* Build configuration list for PBXProject "new_prod" */;
@@ -107,18 +213,30 @@
 			);
 			mainGroup = ECBB4CBD2ED60E2A008E7F57;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				ECBB4D052ED6110A008E7F57 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				ECBB4D0A2ED6113C008E7F57 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = ECBB4CC72ED60E2A008E7F57 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				ECBB4CC52ED60E2A008E7F57 /* new_prod */,
+				ECBB4CE22ED60F9A008E7F57 /* BusinessLogic */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		ECBB4CC42ED60E2A008E7F57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECBB4CE12ED60F9A008E7F57 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,7 +253,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ECBB4CDF2ED60F9A008E7F57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECBB4CEA2ED60F9A008E7F57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECBB4CE22ED60F9A008E7F57 /* BusinessLogic */;
+			targetProxy = ECBB4CE92ED60F9A008E7F57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		ECBB4CDA2ED60E2B008E7F57 /* Debug */ = {
@@ -333,6 +466,90 @@
 			};
 			name = Release;
 		};
+		ECBB4CEE2ED60F9A008E7F57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8RR26756PN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IvanBiriukov.BusinessLogic;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ECBB4CEF2ED60F9A008E7F57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8RR26756PN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IvanBiriukov.BusinessLogic;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -354,7 +571,63 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		ECBB4CED2ED60F9A008E7F57 /* Build configuration list for PBXNativeTarget "BusinessLogic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECBB4CEE2ED60F9A008E7F57 /* Debug */,
+				ECBB4CEF2ED60F9A008E7F57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECBB4D052ED6110A008E7F57 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.1;
+			};
+		};
+		ECBB4D0A2ED6113C008E7F57 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECBB4D062ED6110A008E7F57 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECBB4D052ED6110A008E7F57 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		ECBB4D082ED6110A008E7F57 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECBB4D052ED6110A008E7F57 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		ECBB4D0B2ED6113C008E7F57 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECBB4D0A2ED6113C008E7F57 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		ECBB4D212ED61390008E7F57 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECBB4D052ED6110A008E7F57 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		ECBB4D232ED61395008E7F57 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECBB4D052ED6110A008E7F57 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ECBB4CBE2ED60E2A008E7F57 /* Project object */;
 }
