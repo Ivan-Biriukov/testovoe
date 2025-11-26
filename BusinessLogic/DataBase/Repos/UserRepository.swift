@@ -7,14 +7,17 @@ protocol UserRepositoryProtocol {
     func hasCache() -> Bool
 }
 
+// MARK: - UserRepository
 final class UserRepository: UserRepositoryProtocol {
-    
     private let database: Datable
-    
+        
     init(database: Datable = DatabaseService()) {
         self.database = database
     }
-    
+}
+
+// MARK: - Public Interface
+extension UserRepository {
     func getUsers() -> Observable<[User]> {
         return Observable.create { [weak self] observer in
             guard let self = self else {
@@ -33,6 +36,7 @@ final class UserRepository: UserRepositoryProtocol {
             
             return Disposables.create()
         }
+        .subscribe(on: MainScheduler.instance)
     }
     
     func saveUsers(_ users: [User]) -> Observable<Void> {
@@ -54,6 +58,7 @@ final class UserRepository: UserRepositoryProtocol {
             
             return Disposables.create()
         }
+        .subscribe(on: MainScheduler.instance)
     }
     
     func hasCache() -> Bool {

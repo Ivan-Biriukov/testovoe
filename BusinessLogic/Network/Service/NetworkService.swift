@@ -7,15 +7,17 @@ protocol NetworkServiceProtocol {
 }
 
 final class NetworkService: NetworkServiceProtocol {
-    
+    // MARK: - Properties
     private let session: URLSession
     private let decoder: JSONDecoder
     
+    // MARK: - Init
     init(session: URLSession = .shared) {
         self.session = session
         self.decoder = JSONDecoder()
     }
     
+    // MARK: - Public Methods
     func fetchUsers() -> Observable<[User]> {
         return fetch(endpoint: .users, responseType: UsersResponse.self)
             .map { $0.users }
@@ -25,18 +27,24 @@ final class NetworkService: NetworkServiceProtocol {
         return fetch(endpoint: .statistics, responseType: StatisticsResponse.self)
             .map { $0.statistics }
     }
+}
+
+// MARK: - Private Networking
+private extension NetworkService {
     
-    private func fetch<T: Decodable>(
+    func fetch<T: Decodable>(
         endpoint: APIEndpoint,
         responseType: T.Type
     ) -> Observable<T> {
-        return Observable.create { [weak self] observer in
-            guard let self = self else {
-                observer.onError(NetworkError.invalidURL)
-                return Disposables.create()
-            }
+        
+        let session = self.session
+        let decoder = self.decoder
+        let url = endpoint.url
+        
+        return Observable.create { observer in
             
-            let task = self.session.dataTask(with: endpoint.url) { data, response, error in
+            let task = session.dataTask(with: url) { data, response, error in
+                
                 if let error = error {
                     observer.onError(NetworkError.networkError(error))
                     return
@@ -58,7 +66,7 @@ final class NetworkService: NetworkServiceProtocol {
                 }
                 
                 do {
-                    let decoded = try self.decoder.decode(T.self, from: data)
+                    let decoded = try decoder.decode(T.self, from: data)
                     observer.onNext(decoded)
                     observer.onCompleted()
                 } catch {

@@ -13,7 +13,6 @@ protocol Datable: AnyObject {
 }
 
 final class DatabaseService {
-    
     private var realm: Realm?
     
     init() {

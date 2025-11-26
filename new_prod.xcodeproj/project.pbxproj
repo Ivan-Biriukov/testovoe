@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC114BAC2ED6295F00DD680A /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = EC114BAB2ED6295F00DD680A /* PinLayout */; };
 		ECBB4CEB2ED60F9A008E7F57 /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBB4CE32ED60F9A008E7F57 /* BusinessLogic.framework */; };
 		ECBB4CEC2ED60F9A008E7F57 /* BusinessLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECBB4CE32ED60F9A008E7F57 /* BusinessLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ECBB4D072ED6110A008E7F57 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = ECBB4D062ED6110A008E7F57 /* RxCocoa */; };
@@ -78,6 +79,7 @@
 			files = (
 				ECBB4D092ED6110A008E7F57 /* RxSwift in Frameworks */,
 				ECBB4D072ED6110A008E7F57 /* RxCocoa in Frameworks */,
+				EC114BAC2ED6295F00DD680A /* PinLayout in Frameworks */,
 				ECBB4CEB2ED60F9A008E7F57 /* BusinessLogic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +157,7 @@
 			packageProductDependencies = (
 				ECBB4D062ED6110A008E7F57 /* RxCocoa */,
 				ECBB4D082ED6110A008E7F57 /* RxSwift */,
+				EC114BAB2ED6295F00DD680A /* PinLayout */,
 			);
 			productName = new_prod;
 			productReference = ECBB4CC62ED60E2A008E7F57 /* new_prod.app */;
@@ -216,6 +219,7 @@
 			packageReferences = (
 				ECBB4D052ED6110A008E7F57 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				ECBB4D0A2ED6113C008E7F57 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				EC114BAA2ED6295F00DD680A /* XCRemoteSwiftPackageReference "PinLayout" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = ECBB4CC72ED60E2A008E7F57 /* Products */;
@@ -283,7 +287,6 @@
 				INFOPLIST_FILE = new_prod/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
@@ -320,7 +323,6 @@
 				INFOPLIST_FILE = new_prod/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
@@ -583,6 +585,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EC114BAA2ED6295F00DD680A /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.6;
+			};
+		};
 		ECBB4D052ED6110A008E7F57 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -602,6 +612,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EC114BAB2ED6295F00DD680A /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC114BAA2ED6295F00DD680A /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
+		};
 		ECBB4D062ED6110A008E7F57 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ECBB4D052ED6110A008E7F57 /* XCRemoteSwiftPackageReference "RxSwift" */;

@@ -7,14 +7,17 @@ protocol StatisticsRepositoryProtocol {
     func hasCache() -> Bool
 }
 
+// MARK: - StatisticsRepository
 final class StatisticsRepository: StatisticsRepositoryProtocol {
-    
     private let database: Datable
     
     init(database: Datable = DatabaseService()) {
         self.database = database
     }
-    
+}
+
+// MARK: - Public Interface
+extension StatisticsRepository {
     func getStatistics() -> Observable<[StatisticsItem]> {
         return Observable.create { [weak self] observer in
             guard let self = self else {
@@ -33,6 +36,7 @@ final class StatisticsRepository: StatisticsRepositoryProtocol {
             
             return Disposables.create()
         }
+        .subscribe(on: MainScheduler.instance)
     }
     
     func saveStatistics(_ items: [StatisticsItem]) -> Observable<Void> {
@@ -54,6 +58,7 @@ final class StatisticsRepository: StatisticsRepositoryProtocol {
             
             return Disposables.create()
         }
+        .subscribe(on: MainScheduler.instance)
     }
     
     func hasCache() -> Bool {
